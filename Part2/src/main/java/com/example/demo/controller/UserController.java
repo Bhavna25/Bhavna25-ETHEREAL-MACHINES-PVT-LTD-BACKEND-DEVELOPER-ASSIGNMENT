@@ -1,3 +1,7 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -14,5 +18,5 @@ public class UserController {
         return ResponseEntity.ok(userService.findById(id).orElse(null));
     }
 
-    // Additional CRUD operations
+    // Additional CRUD operations can be implemented here
 }
