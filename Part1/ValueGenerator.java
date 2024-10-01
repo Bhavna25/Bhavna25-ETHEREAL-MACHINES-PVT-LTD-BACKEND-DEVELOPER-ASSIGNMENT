@@ -14,16 +14,11 @@ public class ValueGenerator {
     private static final String PASS = "your_pass";
 
     public static void main(String[] args) {
-        try {
-            // Load data from Excel
-            Workbook workbook = new XSSFWorkbook(new FileInputStream("path_to_your_file.xlsx"));
+        try (Workbook workbook = new XSSFWorkbook(new FileInputStream("path_to_your_file.xlsx"))) {
             Sheet axisSheet = workbook.getSheet("AXIS");
-
-            // Assume axis X values are in the first row
             double minValue = axisSheet.getRow(1).getCell(1).getNumericCellValue();
             double maxValue = axisSheet.getRow(1).getCell(2).getNumericCellValue();
 
-            // Database connection
             Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
             String insertSQL = "INSERT INTO MachineValues (machine_id, axis, timestamp, value) VALUES (?, ?, ?, ?)";
 
@@ -49,10 +44,8 @@ public class ValueGenerator {
             }
 
             connection.close();
-            workbook.close();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
     }
 }
-
