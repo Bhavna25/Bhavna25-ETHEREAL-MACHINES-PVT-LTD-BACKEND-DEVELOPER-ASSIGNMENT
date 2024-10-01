@@ -52,8 +52,8 @@ git commit -m "Initial commit"
 
 Connect to the Remote Repository:
 Link local repository to the GitHub repository, just created:
-git remote add origin https://github.com/Bhavna25/MachineValueGenerator.git
+git remote add origin https://github.com/Bhavna25(your_ID)/MachineValueGenerator.git
 
-Push your commits to the remote repository:
+Push the commits to the remote repository:
 git push -u origin master
 
