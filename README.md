@@ -9,21 +9,21 @@ Part 2: User Management System with Spring Boot
 1. Setting Up Spring Boot
 Create a new Spring Boot project with dependencies for Spring Web, Spring Security, Spring Data JPA, and PostgreSQL.
 2. Application Structure
-Here’s a suggested directory structure for the application:
-                src/main/java/com/example/demo
-                    ├── controller
-                    │   └── UserController.java
-                    ├── model
-                    │   └── User.java
-                    ├── repository
-                    │   └── UserRepository.java
-                    ├── service
-                    │   └── UserService.java
-                    ├── security
-                    │   ├── JwtUtil.java
-                    │   ├── JwtRequestFilter.java
-                    │   └── WebSecurityConfig.java
-                    └── DemoApplication.java
+Here’s a suggested directory structure for the application-
+                    src/main/java/com/example/demo
+                        ├── controller
+                        │   └── UserController.java
+                        ├── model
+                        │   └── User.java
+                        ├── repository
+                        │   └── UserRepository.java
+                        ├── service
+                        │   └── UserService.java
+                        ├── security
+                        │   ├── JwtUtil.java
+                        │   ├── JwtRequestFilter.java
+                        │   └── WebSecurityConfig.java
+                        └── DemoApplication.java
 
 3. User Management Code
 4. JwtUtil.java (for token generation and validation)
